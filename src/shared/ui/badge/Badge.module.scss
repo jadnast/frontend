@@ -1,0 +1,42 @@
+$badge-hover-cursor: help;
+$badge-disabled-cursor: not-allowed;
+$badge-disabled-opacity: .3;
+
+.badge {
+    --padding-tb: calc(var(--font-size) * .58);
+    --padding-lr: calc(var(--font-size) * .75);
+
+    font-size: var(--font-size);
+    max-width: fit-content;
+    font-weight: 500;
+    display: flex;
+    border-radius: 6px;
+    padding: var(--padding-tb) var(--padding-lr);
+    user-select: none;
+    justify-content: center;
+
+    &_solid {
+        background-color: hsl(339, 100%, 46%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    &_ghost {
+        background-color: hsla(340, 100%, 46%, 0.2);
+        color: hsl(339, 100%, 46%);
+    }
+
+    &_gray {
+        background-color: hsl(0, 0%, 5%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    &:hover {
+        cursor: $badge-hover-cursor;
+    }
+
+    &_disabled {
+        cursor: $badge-disabled-cursor;
+        opacity: $badge-disabled-opacity;
+        pointer-events: none;
+    }
+}

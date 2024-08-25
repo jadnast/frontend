@@ -1,7 +1,7 @@
+import { Badge } from "@shared/ui/badge"
+
 export default function Home() {
     return (
-        <div>
-            Hello world!
-        </div>
+        <Badge mode="solid">Text</Badge>
     )
 }
