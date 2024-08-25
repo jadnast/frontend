@@ -1,0 +1,57 @@
+$tap-hover-cursor: help;
+$tap-disabled-cursor: not-allowed;
+$tap-disabled-opacity: .3;
+
+.tap {
+    --padding-tb: calc(var(--font-size) + 1px);
+    --padding-lr: calc(var(--font-size) + 1px);
+
+    font-size: var(--font-size);
+    max-width: fit-content;
+    font-weight: 400;
+    display: flex;
+    border-radius: 48px;
+    padding: var(--padding-tb) var(--padding-lr);
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+
+    &_solid {
+        background: linear-gradient(180deg, hsl(345, 100%, 63%) 0%, hsl(339, 100%, 46%) 100%);
+        color: hsl(0, 0%, 100%);
+        transition: all .6s;
+
+        &:hover {
+            background: linear-gradient(180deg, hsl(339, 100%, 21%) 0%, hsl(339, 100%, 46%) 100%);
+            cursor: $tap-hover-cursor;
+            transition: all .6s;
+        }
+    }
+
+    &_ghost {
+        background: none;
+        color: hsl(0, 0%, 100%);
+
+        &:hover {
+            background-color: hsla(339, 100%, 46%, 0.2);
+            color: hsl(339, 100%, 46%);
+            cursor: $tap-hover-cursor;
+        }
+    }
+
+    &_accent{
+        background-color: hsl(0, 0%, 11%);
+        color: hsl(0, 0%, 100%);
+
+        &:hover {
+            background: hsl(339, 100%, 46%);
+            cursor: $tap-hover-cursor;
+        }
+    }
+
+    &_disabled {
+        cursor: $tap-disabled-cursor;
+        opacity: $tap-disabled-opacity;
+        pointer-events: none;
+    }
+}
