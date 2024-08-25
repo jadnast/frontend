@@ -17,7 +17,7 @@ const meta = {
     disabled: false,
     mode: 'solid',
     children: 'Text',
-    fontSize: '11px'
+    fontSize: 11
   },
 } satisfies Meta<typeof Badge>;
 
@@ -29,7 +29,7 @@ export const Solid: Story = {
     mode: 'solid',
     disabled: false,
     children: 'Text',
-    fontSize: '11px'
+    fontSize: 11
   },
 };
 
@@ -38,7 +38,7 @@ export const Ghost: Story = {
     mode: 'ghost',
     disabled: false,
     children: 'Text',
-    fontSize: '11px'
+    fontSize: 11
   },
 };
 
@@ -47,7 +47,7 @@ export const Gray: Story = {
     mode: 'gray',
     disabled: false,
     children: 'Text',
-    fontSize: '11px'
+    fontSize: 11
   },
 };
 

@@ -6,7 +6,7 @@ export const Badge: FC<BadgeProps> = ({ children, mode, disabled, fontSize }) =>
   return (
     <div 
         className={`${styles.badge} ${styles[`badge_${mode}`]} ${disabled ? styles[`badge_disabled`] : ''}`}
-        style={{ '--font-size': fontSize ? fontSize : '11px' } as React.CSSProperties}
+        style={{ '--font-size': fontSize ? fontSize + 'px' : '11px' } as React.CSSProperties}
     >
       {children}
     </div>
