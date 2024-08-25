@@ -85,3 +85,16 @@ Below is an example of the structure for an authorization feature.
 ```
 
 In addition to unifying the structure, this methodology provides a clear business logic overview, excellent layer descriptions with examples in popular programming languages. It also offers answers to questions about functionality placement and clear rules for reducing dependencies in the code.
+
+## Storybook
+> Please read on as a component [story](https://storybook.js.org/docs/writing-stories/args) creator to get started.
+### Start
+```bash
+bun run storybook
+```
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+### Build
+```bash
+bun run build-storybook
+```
+![image](https://github.com/user-attachments/assets/3ae28e08-6346-43b7-8a89-38fd4687ffb4)
