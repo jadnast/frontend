@@ -1,0 +1,33 @@
+$logo-disabled-cursor: not-allowed;
+$logo-disabled-opacity: .3;
+
+.logo {
+    max-width: fit-content;
+
+    svg{
+        path[data-h='true']{
+            fill: var(--h-color);
+        }
+
+        path[data-h='false']{
+            fill: var(--base-color);
+        }
+    }
+
+    &:hover{
+        svg{
+            path[data-h='false']{
+                fill: var(--hover-base-color);
+            }
+            path[data-h='true']{
+                fill: var(--hover-h-color);
+            }
+        }
+    }
+
+    &_disabled {
+        cursor: $logo-disabled-cursor;
+        opacity: $logo-disabled-opacity;
+        pointer-events: none;
+    }
+}

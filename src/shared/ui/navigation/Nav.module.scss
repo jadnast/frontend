@@ -1,0 +1,24 @@
+$nav-disabled-cursor: not-allowed;
+$nav-disabled-opacity: .3;
+
+.nav {
+    max-width: fit-content;
+    display: flex;
+    border-radius: 80px;
+    padding: 5px;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+
+    background-color: hsl(0, 0%, 5%);
+    border: 1px solid hsl(0, 0%, 11%);
+
+    &_disabled {
+        cursor: $nav-disabled-cursor;
+        opacity: $nav-disabled-opacity;
+        pointer-events: none;
+    }
+}
