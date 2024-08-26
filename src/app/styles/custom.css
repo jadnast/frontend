@@ -1,0 +1,47 @@
+body {
+    overflow-x: hidden;
+}
+
+main{
+    padding: 20px 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero_ch1 {
+    animation: hero_ch1 2.4s infinite linear;
+    backface-visibility: hidden;
+}
+
+@keyframes hero_ch1 {
+    0% {
+        left: -1%;
+        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+    }
+    37% {
+        left: -7%;
+        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+    }
+    100% {
+        left: -1%;
+    }
+}
+
+.hero_ch2 {
+    animation: hero_ch2 2.4s infinite linear;
+    backface-visibility: hidden;
+}
+
+@keyframes hero_ch2 {
+    0% {
+        right: -1%;
+        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+    }
+    37% {
+        right: -7%;
+        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+    }
+    100% {
+        right: -1%;
+    }
+}

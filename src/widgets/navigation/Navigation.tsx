@@ -6,10 +6,10 @@ import { Tap } from '@shared/ui/tap';
 export const Navigation: FC<NavigationProps> = ({disabled}) => {
   return (
     <div className={`${styles.navigation} ${disabled ? styles[`navigation_disabled`] : ''}`}>
-      <Tap mode='solid' href='/'>Главная</Tap>
-      <Tap mode='ghost' href='/explore'>Библиотека</Tap>
-      <Tap mode='ghost' href='/search'>Поиск</Tap>
-      <Tap mode='accent' href='/auth'>Войти</Tap>
+      <Tap mode='solid' href='/' fontSize={13}>Главная</Tap>
+      <Tap mode='ghost' href='/explore' fontSize={13}>Библиотека</Tap>
+      <Tap mode='ghost' href='/search' fontSize={13}>Поиск</Tap>
+      <Tap mode='accent' href='/auth' fontSize={13}>Войти</Tap>
     </div>
   );
 };

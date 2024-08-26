@@ -6,9 +6,9 @@ import { Logo } from '@shared/ui/logo';
 
 export const Header: FC<HeaderProps> = ({disabled}) => {
   return (
-    <div className={`${styles.header} ${disabled ? styles[`header_disabled`] : ''}`}>
-      <Logo/>
+    <header className={`${styles.header} ${disabled ? styles[`header_disabled`] : ''}`}>
+      <Logo width={150} href='/'/>
       <Navigation/>
-    </div>
+    </header>
   );
 };

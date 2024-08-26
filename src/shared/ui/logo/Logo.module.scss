@@ -3,14 +3,17 @@ $logo-disabled-opacity: .3;
 
 .logo {
     max-width: fit-content;
+    transition: .6s;
 
     svg{
         path[data-h='true']{
             fill: var(--h-color);
+            transition: .6s;
         }
 
         path[data-h='false']{
             fill: var(--base-color);
+            transition: .6s;
         }
     }
 
@@ -18,9 +21,11 @@ $logo-disabled-opacity: .3;
         svg{
             path[data-h='false']{
                 fill: var(--hover-base-color);
+                transition: .6s;
             }
             path[data-h='true']{
                 fill: var(--hover-h-color);
+                transition: .6s;
             }
         }
     }
