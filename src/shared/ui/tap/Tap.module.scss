@@ -1,9 +1,9 @@
-$tap-hover-cursor: help;
+$tap-hover-cursor: pointer;
 $tap-disabled-cursor: not-allowed;
 $tap-disabled-opacity: .3;
 
 .tap {
-    --padding-tb: calc(var(--font-size) + 1px);
+    --padding-tb: calc(var(--font-size) - 6px);
     --padding-lr: calc(var(--font-size) + 1px);
 
     font-size: var(--font-size);
@@ -15,6 +15,8 @@ $tap-disabled-opacity: .3;
     user-select: none;
     justify-content: center;
     align-items: center;
+
+    text-decoration: none;
 
     &_solid {
         background: linear-gradient(180deg, hsl(345, 100%, 63%) 0%, hsl(339, 100%, 46%) 100%);
