@@ -3,4 +3,5 @@ export interface TapProps {
     disabled?: boolean;
     mode?: 'solid' | 'ghost' | 'accent';
     fontSize?: Number;
+    href?: string;
 }
