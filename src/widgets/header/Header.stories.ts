@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Nav } from './Nav';
+import { Header as Head } from './Header';
 
-const meta = {
-  title: 'Components/Navigation',
-  component: Nav,
+const meta: Meta<typeof Head> = { // Explicitly type 'meta'
+  title: 'Widgets/Header',
+  component: Head,
   parameters: {
     layout: 'centered',
   },
   args: { 
     disabled: false,
   },
-} satisfies Meta<typeof Nav>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Navigation: Story = {
+export const Header: Story = {
   args: {
     disabled: false,
   },

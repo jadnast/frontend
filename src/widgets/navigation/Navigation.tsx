@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import styles from './Nav.module.scss';
-import { NavProps } from './Nav.types';
+import styles from './Navigation.module.scss';
+import { NavigationProps } from './Navigation.types';
 import { Tap } from '@shared/ui/tap';
 
-export const Nav: FC<NavProps> = ({disabled}) => {
+export const Navigation: FC<NavigationProps> = ({disabled}) => {
   return (
-    <div className={`${styles.nav} ${disabled ? styles[`nav_disabled`] : ''}`}>
+    <div className={`${styles.navigation} ${disabled ? styles[`navigation_disabled`] : ''}`}>
       <Tap mode='solid' href='/'>Главная</Tap>
       <Tap mode='ghost' href='/explore'>Библиотека</Tap>
       <Tap mode='ghost' href='/search'>Поиск</Tap>

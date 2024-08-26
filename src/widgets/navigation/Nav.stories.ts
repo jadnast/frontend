@@ -1,26 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Logo } from './Logo';
+import { Navigation as Nav } from './Navigation';
 
-const meta = {
-  title: 'Shared/Logotype',
-  component: Logo,
+const meta: Meta<typeof Nav> = { // Explicitly type 'meta'
+  title: 'Widgets/Navigation',
+  component: Nav,
   parameters: {
     layout: 'centered',
   },
   args: { 
     disabled: false,
-    width: 200,
-    href: '/'
   },
-} satisfies Meta<typeof Logo>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Logotype: Story = {
+export const Navigation: Story = {
   args: {
     disabled: false,
-    width: 200,
-    href: '/'
   },
 };
