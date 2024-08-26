@@ -6,6 +6,19 @@ main{
     padding: 20px 35px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero_button{
+    font-size: 35px;
+    max-width: fit-content;
+    font-weight: 600 !important;
+    display: flex;
+    padding: 10px 20px;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero_ch1 {
