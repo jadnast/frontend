@@ -11,12 +11,13 @@ const fontSans = FontSans({
  
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
-      <NextNProgress color="#EB0052" stopDelayMs={200} height={3} showOnShallow={true} />
-      <main className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-          <Component {...pageProps} />
-      </main>
-    </>
+      <>
+        <NextNProgress color="#EB0052" stopDelayMs={200} height={3} showOnShallow={true} />
+    
+        <main className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+            <Component {...pageProps} />
+        </main>
+      </>
   )
 }
 
