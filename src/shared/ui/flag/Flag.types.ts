@@ -1,4 +1,4 @@
 export interface FlagProps {
     disabled?: boolean;
-    country?: 'ru_RU' | 'en_GB' | 'ua_UA' | 'kz_KZ';
+    country?: 'RU_RU' | 'EN_GB' | 'UA_UA' | 'KZ_KZ';
 }

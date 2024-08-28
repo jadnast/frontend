@@ -2,23 +2,31 @@ import React, { FC } from 'react';
 import styles from './Footer.module.scss';
 import { FooterProps } from './Footer.types';
 import { Logo } from '@shared/ui/logo';
-import { Link } from '@shared/ui/link';
 import { Flag } from '@shared/ui/flag';
+
+import { Link as SharedLink } from '@shared/ui/link';
+import Link from "next/link";
+
+import { useTranslation } from 'next-i18next';
+import { useRouter } from "next/router";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/shared/ui/dropdown-menu"
 
 export const Footer: FC<FooterProps> = ({disabled, country, className}) => {
-  const countries = {
-    ru_RU: 'Русский',
-    en_GB: 'English'
-  }
+  const router = useRouter();
+  const { locales, locale: activeLocale } = router;
+
+  const otherLocales = (locales || []).filter(
+    (locale) => locale !== activeLocale,
+  );
+
+  const { t: tFooter } = useTranslation('footer')
+  const { t: tCommon } = useTranslation('common')
 
   return (
     <footer className={`${styles.footer} ${disabled ? styles['footer--disabled'] : ''} ${className}`}>
@@ -26,52 +34,62 @@ export const Footer: FC<FooterProps> = ({disabled, country, className}) => {
         <img src='/images/main/footer_ch.png' className='footer_ch'></img>
         <div className={`${styles['footer__section-item--1']}`}>
           <Logo width={150} href='/'></Logo>
-          <p>Hikasami не связана и не поддерживается Sony Pictures Entertainment Music Publishing Inc или любым другим правообладателем. Все размещенные на данном ресурсе материалы принадлежат их соответствующим правообладателям и находятся в публичном доступе.</p>
+          <p>{tFooter('spoiler')}</p>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger style={{ textTransform: 'uppercase' }}>
-            <Link mode='list' country={country}>{countries.ru_RU}</Link>
+            <SharedLink mode='list' country={activeLocale}>{tCommon(activeLocale)}</SharedLink>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            {Object.entries(countries).map(([key, value], i) => (
-              <DropdownMenuItem key={i} className='gap-2'><Flag country={country}/>{value}</DropdownMenuItem>
-            ))}
+
+              {otherLocales.map((locale) => {
+                const { pathname, query, asPath } = router;
+                return (
+                  <DropdownMenuItem key={locale} className='gap-2'>
+                    <Link href={{ pathname, query }} locale={locale} replace={true}
+                    className='gap-2 relative flex cursor-default select-none items-center rounded-[6px] uppercase px-2 py-1.5 text-sm outline-none transition-colors hover:bg-border hover:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50'>
+                      <Flag country={locale}></Flag> {tCommon(locale)}</Link>
+                  </DropdownMenuItem>
+                );
+              })}
+
+
           </DropdownMenuContent>
         </DropdownMenu>
       </section>
       <section className={`${styles['footer__section']} ${styles['footer__section--2']}`}>
         <div className={`${styles['footer__section-item']} ${styles['footer__section-item--2']}`}>
-          <p>О нас</p>
+          <p>{tFooter('about_us')}</p>
           <ul>
-            <li>Команда</li>
-            <li>Вакансия</li>
-            <li>Блог</li>
-            <li>Сообщества</li>
+            <li>{tFooter('team')}</li>
+            <li>{tFooter('career')}</li>
+            <li>{tFooter('blog')}</li>
+            <li>{tFooter('communities')}</li>
           </ul>
-          <p>Разработчикам</p>
+          <p>{tFooter('for_developers')}</p>
           <ul>
-            <li>Команда</li>
-            <li>Вакансия</li>
-            <li>Блог</li>
-            <li>Сообщества</li>
+            <li>{tFooter('сontribution')}</li>
+            <li>{tFooter('docs')}</li>
+            <li>{tFooter('dashboard')}</li>
+            <li>GitHub</li>
           </ul>
         </div>
         <div className={`${styles['footer__section-item']} ${styles['footer__section-item--3']}`}>
-          <p>Политика</p>
+          <p>{tFooter('policy')}</p>
           <ul>
-            <li>Условия использования</li>
-            <li>Конфиденциальность</li>
-            <li>Публичная оферта</li>
-            <li>cookie</li>
-            <li>DMCA</li>
-            <li>Бренд</li>
+            <li>{tFooter('terms')}</li>
+            <li>{tFooter('privacy')}</li>
+            <li>{tFooter('public_offer')}</li>
+            <li>{tFooter('cookie')}</li>
+            <li>{tFooter('dmca')}</li>
+            <li>{tFooter('brand')}</li>
           </ul>
 
-          <p>Другое</p>
+          <p>{tFooter('another')}</p>
           <ul>
-            <li>Сообщение о проблемах</li>
-            <li>Безопасность</li>
-            <li>FAQ</li>
+            <li>{tFooter('reporting')}</li>
+            <li>{tFooter('security')}</li>
+            <li>{tFooter('faq')}</li>
           </ul>
         </div>
         <div className={`${styles['footer__section-item']} ${styles['footer__section-item--4']}`}>

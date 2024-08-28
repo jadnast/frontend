@@ -9,6 +9,7 @@ $nav-disabled-opacity: .3;
     @media (min-width: 1024px) {
         flex-direction: row;
         max-height: 360px;
+        min-height: min-content;
     }
 
     min-height: 360px;
@@ -60,6 +61,7 @@ $nav-disabled-opacity: .3;
 
             @media (min-width: 1024px) {
                 grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: none;
             }
 
             grid-template-rows: repeat(3, 1fr);
@@ -105,7 +107,7 @@ $nav-disabled-opacity: .3;
                 li{
                     color: #ffffff;
                     text-transform: uppercase;
-                    font-size: 16px;   
+                    font-size: 13px;   
                     transition: .6s; 
                     &:hover{
                         color: #EB0052;
