@@ -57,3 +57,11 @@ main{
         right: -1%;
     }
 }
+
+button{
+    width: fit-content;
+}
+
+button:focus-visible{
+    outline: none;
+}
