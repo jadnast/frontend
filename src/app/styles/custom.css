@@ -16,7 +16,6 @@ main{
     font-weight: 600 !important;
     display: flex;
     padding: 10px 20px;
-    user-select: none;
     justify-content: center;
     align-items: center;
 }

@@ -1,0 +1,84 @@
+$nav-disabled-cursor: not-allowed;
+$nav-disabled-opacity: .3;
+
+.footer {
+    height: 360px;
+    background-color: #121212;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 7px solid #EB0052;
+
+    &--disabled {
+        cursor: $nav-disabled-cursor;
+        opacity: $nav-disabled-opacity;
+        pointer-events: none;
+    }
+
+    &__section{
+        width: 100%;
+        min-width: 960px;
+        position: relative;
+        &--1{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px 0px 30px 30px;
+
+            img[src='/images/main/footer_ch.png']{
+                height: auto;
+                width: 210px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        &--2{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
+            overflow-y: hidden;
+        }
+    }
+
+    &__section-item{
+        &--1{
+            display: flex;
+            flex-direction: column;
+            max-width: 675px;
+            p{
+                color: #ffffff;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+        &--2, &--3, &--4{
+            border-left: 1px solid hsla(0, 0%, 100%, 0.1);
+            max-width: 320px;
+            width: fit-content;
+            padding: 20px 12px;
+            p{
+                margin-block-start: 0;
+                margin-block-end: 5px;
+                text-transform: uppercase;
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: 600!important;
+            }
+            ul{
+                list-style-type: none;
+                margin-block-start: 0;
+                margin-block-end: 40px;
+                padding-inline-start: 0;
+                li{
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-size: 16px;    
+                    &:hover{
+                        color: #EB0052;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

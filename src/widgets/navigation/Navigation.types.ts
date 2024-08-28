@@ -1,6 +1,3 @@
-export interface NavProps {
-    children: React.ReactNode;
+export interface NavigationProps {
     disabled?: boolean;
-    mode?: 'solid' | 'ghost' | 'accent';
-    fontSize?: Number;
 }
