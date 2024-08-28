@@ -46,12 +46,27 @@ Below is the description of terms from the documentation:
 ### Layers
 The first level of abstraction - according to the scope of influence.
 
-- app - application initialization (init, styles, providers, etc.);
-- processes - business processes of the application managing pages (payment, auth, etc.);
-- pages - application pages (user-page, etc.);
-- features - parts of the application’s functionality (auth-by-oauth, etc.);
-- entities - business entities (viewer, order, etc.);
-- shared - reusable infrastructure code (UIKit, libs, API, etc.).
+```
+└── hikasami-frontend
+    └── public
+        └── images
+    └── src
+        └── app - application initialization (init, styles, providers, etc.);
+            └── providers
+            └── styles
+                └── custom.css
+                └── tailwind.css
+        └── processes - business processes of the application managing pages (payment, auth, etc.);
+        └── pages - application pages (user-page, etc.);
+            └── _app.tsx
+        └── features - parts of the application’s functionality (auth-by-oauth, etc.);
+        └── entities - business entities (viewer, order, etc.);
+        └── widgets
+        └── shared - reusable infrastructure code (UIKit, libs, API, etc.).
+            └── libs
+            └── locales
+            └── ui
+```
 
 ### Slices
 The second level of abstraction - according to the business domain.
