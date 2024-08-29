@@ -1,0 +1,10 @@
+[project]
+name = "frontend"
+
+[build]
+command = "bun install && bun run next build"
+[build.environment]
+NODE_VERSION = "18.17.1"
+
+[build.output]
+directory = ".next"
