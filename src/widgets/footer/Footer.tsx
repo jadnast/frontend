@@ -37,7 +37,7 @@ export const Footer: FC<FooterProps> = ({disabled, country, className}) => {
           window.location.reload(); // Обновление страницы
         }}
           className='gap-2 relative flex cursor-default select-none items-center rounded-[6px] uppercase px-2 py-1.5 text-sm outline-none transition-colors hover:bg-border hover:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50'>
-          <Flag country={locale}></Flag>{translations[activeLocale].common[`${locale}`]}
+          <Flag country={locale as Locale}></Flag>{translations[activeLocale].common[locale as Locale]}
         </div>
       </DropdownMenuItem>
     );
