@@ -1,0 +1,116 @@
+.anime__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: min-content !important;
+    height: 100%;
+    gap: 1rem;
+    text-decoration: none;
+
+    &_disabled{
+        cursor: default;
+
+        .anime__item_image{
+            &:before{
+                height: 30rem!important;
+                opacity: 1!important;
+                content: "";
+                background: linear-gradient(.5turn, hsl(0, 0%, 7%) -10%, hsla(0, 0%, 7%, 0) 30%)!important;
+            }
+
+            &:after{
+                opacity: 0!important;
+                transition: opacity .6s ease;
+            }
+        }
+
+        .anime__item_title{
+            color: hsl(0, 0%, 100%)!important;
+            display: none;
+        }
+    }
+
+    &:hover{
+        .anime__item_image{
+            &:before{
+                opacity: .8;
+                transition: opacity .6s ease;
+            }
+
+            &:after{
+                opacity: 1;
+                transition: opacity .6s ease;
+            }
+        }
+
+        .anime__item_title{
+            color: hsl(339, 100%, 46%);
+        }
+    }
+
+    &_image{
+        background-color: hsl(0, 0%, 7%);
+        border: 1px solid hsl(0, 0%, 11%);
+        border-radius: 11px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        height: 18rem;
+        justify-content: space-between;
+        max-height: 18rem;
+        max-width: 14rem;
+        padding: 1rem;
+        position: relative;
+        transition: transform .6s ease, background-color .6s ease, box-shadow .6s ease, align-items .6s ease;
+        width: 14rem;
+        align-items: flex-end;
+
+        &:before{
+            content: "";
+            height: 100%;
+            background: linear-gradient(0deg, hsl(0, 0%, 7%) 100%, hsla(0, 0%, 7%, 0)0%);
+            opacity: 0;
+            z-index: 0;
+            border-radius: 9px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            transition: opacity .6s ease;
+        }
+
+        &:after {
+            content: "";
+            height: 30px;
+            left: 50%;
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            transition: .6s opacity;
+            background: url('data:image/svg+xml;utf8,<svg width="30" height="30" viewBox="0 0 95 111" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 10.6765C0 2.90036 8.48589 -1.9003 15.151 2.10518L89.7374 46.9287C96.2027 50.8141 96.2027 60.1859 89.7374 64.0713L15.151 108.895C8.4859 112.9 0 108.1 0 100.324V10.6765Z" fill="white"/></svg>');
+            background-size: cover;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            width: 100%;
+            justify-content: space-between;
+            z-index: 1;
+        }
+    }
+
+    &_title {
+        font-size: 20px;
+        z-index: 1;
+        margin: 0;
+        color: hsl(0, 0%, 100%);
+        transition: .6s;
+    }
+}

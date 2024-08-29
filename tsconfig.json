@@ -22,7 +22,8 @@
       "@app/*": ["./src/app/*"],
       "@shared/*": ["./src/shared/*"],
       "@entities/*": ["./src/entities/*"],
-      "@widgets/*": ["./src/widgets/*"]
+      "@widgets/*": ["./src/widgets/*"],
+      "@processes/*": ["./src/processes/*"]
       
     }
   },

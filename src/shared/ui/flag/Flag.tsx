@@ -7,7 +7,8 @@ const flags = {
   ru_RU: require('./flags/ru_RU.svg').default.src,
   en_GB: require('./flags/en_GB.svg').default.src,
   kz_KZ: require('./flags/kz_KZ.svg').default.src,
-  ua_UA: require('./flags/ua_UA.svg').default.src
+  ua_UA: require('./flags/ua_UA.svg').default.src,
+  jp_JP: require('./flags/jp_JP.svg').default.src
 }
 
 export const Flag: FC<FlagProps> = ({country, disabled }) => {
