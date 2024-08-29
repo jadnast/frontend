@@ -1,1 +1,6 @@
-compatibility_flags = [ "nodejs_compat" ]
+name = "frontend"
+type = "javascript"
+compatibility_date = "2023-10-01"
+
+[compatibility_flags]
+nodejs_compat = true
