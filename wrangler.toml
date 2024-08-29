@@ -1,2 +1,5 @@
+name = "frontend"
+type = "javascript"
+
 [build]
-command = "bun install"
+command = "bun install && bun run next build"
