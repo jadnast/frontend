@@ -1,8 +1,20 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { AnimeListProps, CardProps } from './AnimeList.types';
 import { Card } from '@shared/ui/card';
 
+import { getCookie } from 'cookies-next';
+import { Locale, translations } from "@processes/i18n";
+
+type IndexKeys = keyof typeof translations[Locale]['index'];
+
 export const AnimeList: FC<AnimeListProps> = ({ cards, title, id }) => {
+    const [activeLocale, setActiveLocale] = useState<Locale>(() => "ru_RU" as Locale);
+
+    useEffect(() => {
+      const locale = (getCookie("locale") || "ru_RU") as Locale;
+      setActiveLocale(locale);
+    }, []);
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {
@@ -24,7 +36,7 @@ export const AnimeList: FC<AnimeListProps> = ({ cards, title, id }) => {
 
     return (
         <section className='flex gap-5 flex-col mb-9' id={id ?? 'id'}>
-            <h2 className="text-3xl uppercase font-bold">{title ?? 'Title'}</h2>
+            <h2 className="text-3xl uppercase font-bold">{`${translations[activeLocale].index[id as IndexKeys]}`}</h2>
             <div className='grid items-center gap-5' style={{ gridTemplateColumns: 'repeat(3, auto)' }}>
                 <svg width="43" height="44" viewBox="0 0 43 44" fill="none" xmlns="http://www.w3.org/2000/svg" id='prev-btn' onClick={handlePrev} className='hover:cursor-pointer text-white hover:text-primary transition-all duration-700'>
                     <path d="M-1.87959e-06 21.6C-2.91766e-06 9.72589 9.62587 0.100009 21.5 0.100008C33.3741 0.100007 43 9.72588 43 21.6C43 33.4741 33.3741 43.1 21.5 43.1C9.62588 43.1 -8.41521e-07 33.4741 -1.87959e-06 21.6Z" fill="currentColor" fillOpacity="0.1" />
