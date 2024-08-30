@@ -9,8 +9,6 @@ export const Tap: FC<TapProps> = ({ children, mode, disabled, fontSize, href }) 
   const router = useRouter();
   const active = href && href === router.pathname;
 
-  console.log(router.pathname)
-
   return (
     <Link href={href || '#'}
         className={`

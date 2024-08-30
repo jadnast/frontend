@@ -17,7 +17,7 @@ export const Navigation: FC<NavigationProps> = ({disabled}) => {
 
   return (
     <nav className={`${styles.navigation} ${disabled ? styles[`navigation_disabled`] : ''}`}>
-      <Tap mode='solid' href='/' fontSize={13}>{translations[activeLocale].header.home}</Tap>
+      <Tap mode='ghost' href='/' fontSize={13}>{translations[activeLocale].header.home}</Tap>
       <Tap mode='ghost' href='/explore' fontSize={13}>{translations[activeLocale].header.explore}</Tap>
       <Tap mode='ghost' href='/search' fontSize={13}>{translations[activeLocale].header.search}</Tap>
       <Tap mode='accent' href='/auth' fontSize={13}>{translations[activeLocale].header.auth}</Tap>
