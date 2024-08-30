@@ -6,9 +6,11 @@ import { FlagProps } from './Flag.types';
 const flags = {
   ru_RU: require('./flags/ru_RU.svg').default.src,
   en_GB: require('./flags/en_GB.svg').default.src,
-  kz_KZ: require('./flags/kz_KZ.svg').default.src,
-  ua_UA: require('./flags/ua_UA.svg').default.src,
-  jp_JP: require('./flags/jp_JP.svg').default.src
+  kk_KZ: require('./flags/kk_KZ.svg').default.src,
+  uk_UA: require('./flags/uk_UA.svg').default.src,
+  ja_JP: require('./flags/ja_JP.svg').default.src,
+  be_BY: require('./flags/be_BY.svg').default.src,
+  pl_PL: require('./flags/pl_PL.svg').default.src
 }
 
 export const Flag: FC<FlagProps> = ({country, disabled }) => {
