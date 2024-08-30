@@ -1,13 +1,6 @@
 import React, { FC, useState } from 'react';
-import { AnimeListProps } from './AnimeList.types';
+import { AnimeListProps, CardProps } from './AnimeList.types';
 import { Card } from '@shared/ui/card';
-
-export interface CardProps {
-    type: string;
-    status: string;
-    age: string;
-    title: string;
-}
 
 export const AnimeList: FC<AnimeListProps> = ({ cards, title, id }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

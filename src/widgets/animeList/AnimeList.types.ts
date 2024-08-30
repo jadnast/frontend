@@ -1,5 +1,12 @@
 export interface AnimeListProps {
-    title?: string;
+    cards: CardProps[]; // Ensure cards is typed as CardProps[]
+    title: string;
     id?: string;
-    cards: Object[];
+}
+
+export interface CardProps {
+    type: string;
+    status: string;
+    age: string;
+    title: string;
 }
