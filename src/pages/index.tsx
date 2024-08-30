@@ -21,8 +21,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <AnimeList id="new_anime" cards={animeCards} />
-      <AnimeList id="popular_anime" cards={animeCards} />
+      <AnimeList title="Новинки" id="new_anime" cards={animeCards} />
+      <AnimeList title="Популярное" id="popular_anime" cards={animeCards} />
     </>
   );
 }
