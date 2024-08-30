@@ -27,6 +27,7 @@ const altTexts  = {
 
 export const Flag: FC<FlagProps> = ({country, disabled }) => {
   const altText = altTexts[country ?? 'ru_RU'];
+
   return (
       <Image
           className={`${styles.flag} ${styles[`flag_${country}`]} ${disabled ? styles[`flag_disabled`] : ''}`}
