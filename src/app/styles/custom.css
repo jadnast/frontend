@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
 }
 
-body:before{
+body:before {
     position: fixed;
     display: block;
     width: 100%;
@@ -12,7 +12,7 @@ body:before{
     background: linear-gradient(.5turn, hsl(var(--background)) -10%, hsla(0, 0%, 5%, 0) 30%);
 }
 
-main{
+main {
     padding: 20px 35px;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ main{
     gap: 2rem;
 }
 
-.hero_button{
+.hero_button {
     font-size: 35px;
     max-width: fit-content;
     font-weight: 600 !important;
@@ -38,11 +38,11 @@ main{
 @keyframes hero_ch1 {
     0% {
         left: -1%;
-        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+        animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     37% {
         left: -7%;
-        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+        animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     100% {
         left: -1%;
@@ -57,21 +57,21 @@ main{
 @keyframes hero_ch2 {
     0% {
         right: -1%;
-        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+        animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     37% {
         right: -7%;
-        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+        animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     100% {
         right: -1%;
     }
 }
 
-button{
+button {
     width: fit-content;
 }
 
-button:focus-visible{
+button:focus-visible {
     outline: none;
 }
