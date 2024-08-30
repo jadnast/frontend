@@ -43,7 +43,7 @@ export const Footer: FC<FooterProps> = ({disabled, country, className}) => {
         <footer className={`${styles.footer} ${disabled ? styles['footer--disabled'] : ''} ${className}`}>
             <section className={`${styles.footer__section} ${styles['footer__section--1']}`}>
                 <Image src='/images/main/footer_ch.png'
-                       className='footer_ch' alt={'anime girl'}
+                       className={styles.footer__ch} alt={'anime girl'}
                        width={210} height={220}
                        style={{
                            position: 'absolute',
