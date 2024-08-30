@@ -96,6 +96,17 @@
             background-size: cover;
         }
 
+        div[data-radix-popper-content-wrapper]{
+            width: fit-content;
+            div{
+                border-radius: 7px!important;
+            }
+        }
+
+        button{
+            z-index: 1;
+        }
+
         div{
             display: flex;
             flex-direction: row;
