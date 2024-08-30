@@ -39,14 +39,14 @@ export const en_GB: Story = {
 export const kz_KZ: Story = {
   args: {
     disabled: false,
-    country: 'kz_KZ'
+    country: 'kk_KZ'
   },
 };
 
 export const ua_UA: Story = {
   args: {
     disabled: false,
-    country: 'ua_UA'
+    country: 'uk_UA'
   },
 };
 
