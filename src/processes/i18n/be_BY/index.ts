@@ -5,9 +5,9 @@ import header from './header.json';
 import index from './index.json';
 
 export default {
-    footer: footer,
     common: common,
-    hero: hero,
+    footer: footer,
     header: header,
+    hero: hero,
     index: index
 }
