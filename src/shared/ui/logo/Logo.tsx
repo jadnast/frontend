@@ -3,6 +3,7 @@ import styles from './Logo.module.scss';
 import { LogoProps } from './Logo.types';
 
 export const Logo: FC<LogoProps> = ({disabled, width, baseColor, hoverBaseColor, hColor, hoverHColor, href}) => {
+
   return (
     <a href={href}
       className={`${styles.logo} ${disabled ? styles[`logo_disabled`] : ''}`}
@@ -14,7 +15,7 @@ export const Logo: FC<LogoProps> = ({disabled, width, baseColor, hoverBaseColor,
       } as React.CSSProperties}
     >
 
-      <svg width={`${width ? width : '200'}px`} height="auto" viewBox="0 0 252 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width={String(width ? width : 200)} height={String(width ? width / 5 : 200 / 5)} viewBox="0 0 252 54" fill="none" xmlns="http://www.w3.org/2000/svg">
         <title>Hikasami Logo</title>
         <path data-h='false' d="M4.91658 32.9988L6.56673 23.5751H33.1147L31.4646 32.9988H4.91658ZM28.4555 11.9767H38.9873L33.1633 45.8054H22.6314L28.4555 11.9767ZM6.32406 11.9767H16.8559L11.0318 45.8054H0.5L6.32406 11.9767Z"/>
         <path data-h='false' d="M45.3786 11.9767H56.1532L50.3291 45.8054H39.5546L45.3786 11.9767Z"/>

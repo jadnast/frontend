@@ -13,7 +13,8 @@ export const Tap: FC<TapProps> = ({ children, mode, disabled, fontSize, href }) 
     <Link href={href || '#'}
         className={`
           ${styles.tap} 
-          ${styles[`tap_${mode}`]} 
+          ${ href ? "" : styles[`tap_${mode}`]} 
+          ${ href === router.pathname ? styles[`tap_solid`] : styles[`tap_${mode}`]} 
           ${disabled ? styles[`tap_disabled`] : ''} 
           ${active ? styles[`tap_active`] : ''}
           `}
