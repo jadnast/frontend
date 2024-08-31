@@ -5,6 +5,8 @@ $nav-disabled-opacity: .3;
   background-color: #121212;
   display: flex;
   border-bottom: 7px solid #EB0052;
+  z-index: 1;
+  position: relative;
 
   @media (min-width: 1024px) {
     flex-direction: row;

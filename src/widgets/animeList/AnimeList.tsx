@@ -8,10 +8,10 @@ import { Locale, translations } from "@processes/i18n";
 type IndexKeys = keyof typeof translations[Locale]['index'];
 
 export const AnimeList: FC<AnimeListProps> = ({ cards, title, id }) => {
-    const [activeLocale, setActiveLocale] = useState<Locale>(() => "ru_RU" as Locale);
+    const [activeLocale, setActiveLocale] = useState<Locale>(() => Locale.ru);
 
     useEffect(() => {
-      const locale = (getCookie("locale") || "ru_RU") as Locale;
+      const locale = (getCookie("locale") || Locale.ru) as Locale;
       setActiveLocale(locale);
     }, []);
 

@@ -14,10 +14,10 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {Locale, translations} from "@processes/i18n";
 
 export const Footer: FC<FooterProps> = ({disabled, country, className}) => {
-    const [activeLocale, setActiveLocale] = useState<Locale>(() => "ru_RU" as Locale);
+    const [activeLocale, setActiveLocale] = useState<Locale>(() => Locale.ru);
 
     useEffect(() => {
-        const locale = (getCookie("locale") || "ru_RU") as Locale;
+        const locale = (getCookie("locale") || Locale.ru) as Locale;
         setActiveLocale(locale);
     }, []);
 

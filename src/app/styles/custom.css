@@ -75,3 +75,18 @@ button {
 button:focus-visible {
     outline: none;
 }
+
+.auth{
+    display: flex;
+    justify-content: center;
+}
+
+.auth:before{
+    content: "";
+    width: 100%;
+    z-index: 0;
+    top: 100px;
+    height: 100%;
+    position: absolute;
+    background-image: url(/images/main/bg.png);
+}

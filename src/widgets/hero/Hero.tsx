@@ -7,10 +7,10 @@ import { getCookie } from 'cookies-next';
 import { Locale, translations } from "@processes/i18n";
 
 export const Hero: FC<HeroProps> = ({disabled}) => {
-    const [activeLocale, setActiveLocale] = useState<Locale>(() => "ru_RU" as Locale);
+    const [activeLocale, setActiveLocale] = useState<Locale>(() => Locale.ru);
 
     useEffect(() => {
-      const locale = (getCookie("locale") || "ru_RU") as Locale;
+      const locale = (getCookie("locale") || Locale.ru) as Locale;
       setActiveLocale(locale);
     }, []);
 
