@@ -1,7 +1,7 @@
 "use client";
 import React, { FC, useEffect, useState } from 'react';
 import { HeroProps } from './Hero.types';
-
+import Image from "next/image";
 import { getCookie } from 'cookies-next';
 
 import { Locale, translations } from "@processes/i18n";
@@ -27,11 +27,11 @@ export const Hero: FC<HeroProps> = ({disabled}) => {
           </div>
     
           <div className="hero_ch1 lg:block hidden" style={{ position: 'absolute', left: '-1%' }}>
-              <img src="/images/main/ch1.png" alt=""/>
+              <Image src="/images/main/ch1.png" alt={'anime hero'} width={532} height={962}/>
           </div>
     
           <div className="hero_ch2 lg:block hidden" style={{ position: 'absolute', right: '-1%' }}>
-              <img src="/images/main/ch2.png" alt=""/>
+              <Image src="/images/main/ch2.png" alt={'anime hero'} width={534} height={962}/>
           </div>
       </div>
     );
