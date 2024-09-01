@@ -27,11 +27,11 @@ export const Hero: FC<HeroProps> = ({disabled}) => {
           </div>
     
           <div className="hero_ch1 lg:block hidden" style={{ position: 'absolute', left: '-1%' }}>
-              <Image src="/images/main/ch1.png" alt={'anime hero'} width={532} height={962}/>
+              <Image src="/images/main/ch1.png" alt={'anime hero'} width={532} height={962} priority={true}/>
           </div>
     
           <div className="hero_ch2 lg:block hidden" style={{ position: 'absolute', right: '-1%' }}>
-              <Image src="/images/main/ch2.png" alt={'anime hero'} width={534} height={962}/>
+              <Image src="/images/main/ch2.png" alt={'anime hero'} width={534} height={962} priority={true}/>
           </div>
       </div>
     );
