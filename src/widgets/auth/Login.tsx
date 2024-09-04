@@ -27,6 +27,7 @@ export const Login: FC<AuthProps> = ({disabled, className}) => {
 
         if (result.statusCode === 200) {
             console.log('Авторизация успешна', result);
+            window.location.replace('/');
         } else {
             setError(result.message);
         }
